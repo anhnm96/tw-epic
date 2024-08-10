@@ -16,4 +16,5 @@ export default antfu(
   },
   nuxt,
   eslintPluginPrettierRecommended,
+  { rules: { 'prettier/prettier': ['off'] }, files: ['**/*.md'] },
 )

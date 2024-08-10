@@ -109,9 +109,14 @@ const logos = [
 </script>
 
 <template>
-  <ul>
+  <ul class="flex max-w-3xl flex-wrap justify-center gap-2">
     <li v-for="logo in logos" :key="logo.alt">
-      <Icon class="w-16" :name="logo.src" :atl="logo.alt" />
+      <a
+        :href="logo.href"
+        class="grid size-20 place-items-center rounded-2xl bg-highlight/[7%] p-4"
+      >
+        <Icon class="h-full w-full" :name="logo.src" :atl="logo.alt" />
+      </a>
     </li>
   </ul>
 </template>
