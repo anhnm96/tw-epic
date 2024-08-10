@@ -2,8 +2,12 @@
 
 <template>
   <div class="grid h-dvh place-items-center px-4 py-16">
-    <div class="grid place-items-center gap-12 sm:gap-16">
-      <div class="flex max-w-md flex-col items-center text-center">
+    <div
+      class="grid place-items-center gap-12 sm:gap-16 xl:grid-cols-[auto_1fr] xl:gap-24"
+    >
+      <div
+        class="flex max-w-md flex-col items-center text-center xl:order-2 xl:items-start xl:text-left"
+      >
         <EpicStackLogo class="size-20" />
         <h1
           class="mt-6 text-4xl font-medium sm:text-4.5xl md:mt-8 md:text-5xl lg:text-5.5xl"
