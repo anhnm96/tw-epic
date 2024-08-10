@@ -13,6 +13,9 @@ export default antfu(
       'style/arrow-parens': 'off',
       'style/operator-linebreak': 'off',
     },
+    languageOptions: {
+      parser: '@typescript-eslint/parser'
+    }
   },
   nuxt,
   eslintPluginPrettierRecommended,
