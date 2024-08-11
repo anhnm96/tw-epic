@@ -28,13 +28,7 @@ const logos = [
     column: 2,
     row: 2,
   },
-  {
-    src: 'logos:zod',
-    alt: 'Zod',
-    href: 'https://zod.dev/',
-    column: 2,
-    row: 3,
-  },
+  { src: 'logos:zod', alt: 'Zod', href: 'https://zod.dev/', column: 2, row: 3 },
   {
     src: 'logos:github',
     alt: 'GitHub',
@@ -84,13 +78,7 @@ const logos = [
     column: 4,
     row: 1,
   },
-  {
-    src: 'logos:msw',
-    alt: 'MSW',
-    href: 'https://mswjs.io',
-    column: 4,
-    row: 2,
-  },
+  { src: 'logos:msw', alt: 'MSW', href: 'https://mswjs.io', column: 4, row: 2 },
   {
     src: 'logos:faker',
     alt: 'Faker.js',
@@ -150,23 +138,23 @@ const logos = [
 ] as const
 
 const columnClasses: Record<(typeof logos)[number]['column'], string> = {
-	1: 'xl:col-start-1',
-	2: 'xl:col-start-2',
-	3: 'xl:col-start-3',
-	4: 'xl:col-start-4',
-	5: 'xl:col-start-5',
+  1: 'xl:col-start-1',
+  2: 'xl:col-start-2',
+  3: 'xl:col-start-3',
+  4: 'xl:col-start-4',
+  5: 'xl:col-start-5',
 }
 const rowClasses: Record<(typeof logos)[number]['row'], string> = {
-	1: 'xl:row-start-1',
-	2: 'xl:row-start-2',
-	3: 'xl:row-start-3',
-	4: 'xl:row-start-4',
-	5: 'xl:row-start-5',
-	6: 'xl:row-start-6',
+  1: 'xl:row-start-1',
+  2: 'xl:row-start-2',
+  3: 'xl:row-start-3',
+  4: 'xl:row-start-4',
+  5: 'xl:row-start-5',
+  6: 'xl:row-start-6',
 }
 
 function clsx(...classes: string[]) {
-	return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ')
 }
 </script>
 
@@ -174,12 +162,16 @@ function clsx(...classes: string[]) {
   <ul
     class="flex max-w-3xl flex-wrap justify-center gap-2 sm:gap-4 xl:grid xl:grid-flow-col xl:grid-cols-5 xl:grid-rows-6"
   >
-    <li v-for="logo in logos" :key="logo.alt" :class="clsx(columnClasses[logo.column], rowClasses[logo.row])">
+    <li
+      v-for="logo in logos"
+      :key="logo.alt"
+      :class="clsx(columnClasses[logo.column], rowClasses[logo.row])"
+    >
       <a
         :href="logo.href"
-        class="grid size-20 place-items-center rounded-2xl bg-highlight/[7%] p-4 sm:size-24"
+        class="grid size-20 place-items-center rounded-2xl bg-highlight/[7%] p-4 transition hover:-rotate-6 hover:bg-highlight/10 focus:outline-none focus:ring-2 focus:ring-highlight focus:ring-offset-2 sm:size-24"
       >
-        <Icon class="h-full w-full" :name="logo.src" :atl="logo.alt" />
+        <Icon class="size-full" :name="logo.src" :atl="logo.alt" />
       </a>
     </li>
   </ul>
