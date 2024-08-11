@@ -161,9 +161,17 @@ const rowClasses: Record<(typeof logos)[number]['row'], string> = {
     class="flex max-w-3xl flex-wrap justify-center gap-2 sm:gap-4 xl:grid xl:grid-flow-col xl:grid-cols-5 xl:grid-rows-6"
   >
     <li
-      v-for="logo in logos"
+      v-for="(logo, index) in logos"
       :key="logo.alt"
-      :class="clsx(columnClasses[logo.column], rowClasses[logo.row])"
+      :style="{ '--loop-index': index }"
+      :class="
+        clsx(
+          columnClasses[logo.column],
+          rowClasses[logo.row],
+          'motion-safe:animate-roll-reveal animate-fade-in',
+          'motion-safe:[animation-delay:calc(0.07s*var(--loop-index))]',
+        )
+      "
     >
       <a
         :href="logo.href"
