@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { clsx } from '~/utlis'
+
 const logos = [
   {
     src: 'logos:remix',
@@ -151,10 +153,6 @@ const rowClasses: Record<(typeof logos)[number]['row'], string> = {
   4: 'xl:row-start-4',
   5: 'xl:row-start-5',
   6: 'xl:row-start-6',
-}
-
-function clsx(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
 }
 </script>
 

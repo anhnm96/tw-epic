@@ -35,9 +35,20 @@ export default {
             transform: 'translateY(0)',
           },
         },
+        'slide-left': {
+          from: {
+            opacity: '0',
+            transform: 'translateX(20px)',
+          },
+          to: {
+            opacity: '1',
+            transform: 'translateX(0)',
+          },
+        },
       },
       animation: {
         'slide-top': 'slide-top 0.3s ease-out backwards',
+        'slide-left': 'slide-left 0.3s ease-out backwards',
       },
     },
   },
