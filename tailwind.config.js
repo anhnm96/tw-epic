@@ -24,6 +24,21 @@ export default {
         '4.5xl': ['2.625rem', '1.15'],
         '5.5xl': ['3.375rem', '1'],
       },
+      keyframes: {
+        'slide-top': {
+          from: {
+            opacity: '0',
+            transform: 'translateY(20px)',
+          },
+          to: {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+      },
+      animation: {
+        'slide-top': 'slide-top 0.3s ease-out backwards',
+      },
     },
   },
   plugins: [],
