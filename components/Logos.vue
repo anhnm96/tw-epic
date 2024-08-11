@@ -158,7 +158,7 @@ const rowClasses: Record<(typeof logos)[number]['row'], string> = {
 
 <template>
   <ul
-    class="flex max-w-3xl flex-wrap justify-center gap-2 sm:gap-4 xl:grid xl:grid-flow-col xl:grid-cols-5 xl:grid-rows-6"
+    class="flex max-w-3xl flex-wrap justify-center gap-2 sm:gap-4 xl:row-span-6 xl:grid xl:grid-flow-col xl:grid-cols-5 xl:grid-rows-subgrid"
   >
     <li
       v-for="(logo, index) in logos"
