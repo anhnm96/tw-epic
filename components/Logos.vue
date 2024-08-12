@@ -3,9 +3,9 @@ import { clsx } from '~/utlis'
 
 const logos = [
   {
-    src: 'logos:remix',
-    alt: 'Remix',
-    href: 'https://remix.run',
+    src: 'logos:nuxt-icon',
+    alt: 'Nuxt',
+    href: 'https://nuxt.com',
     column: 1,
     row: 1,
   },
@@ -32,7 +32,7 @@ const logos = [
   },
   { src: 'logos:zod', alt: 'Zod', href: 'https://zod.dev/', column: 2, row: 3 },
   {
-    src: 'logos:github',
+    src: 'logos:github-icon',
     alt: 'GitHub',
     href: 'https://github.com',
     column: 2,
@@ -46,9 +46,9 @@ const logos = [
     row: 5,
   },
   {
-    src: 'logos:react',
-    alt: 'React Email',
-    href: 'https://react.email',
+    src: 'logos:react-query-icon',
+    alt: 'Tanstack Query',
+    href: 'https://tanstack.com/query/latest/docs/framework/vue/overview',
     column: 2,
     row: 6,
   },
@@ -103,7 +103,7 @@ const logos = [
     row: 5,
   },
   {
-    src: 'logos:docker',
+    src: 'logos:docker-icon',
     alt: 'Docker',
     href: 'https://www.docker.com',
     column: 4,
@@ -168,7 +168,7 @@ const rowClasses: Record<(typeof logos)[number]['row'], string> = {
         clsx(
           columnClasses[logo.column],
           rowClasses[logo.row],
-          'motion-safe:animate-roll-reveal animate-fade-in',
+          'animate-fade-in motion-safe:animate-roll-reveal',
           'motion-safe:[animation-delay:calc(0.07s*var(--loop-index))]',
         )
       "

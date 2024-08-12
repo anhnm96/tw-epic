@@ -1,7 +1,6 @@
 import antfu from '@antfu/eslint-config'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import tsParser from '@typescript-eslint/parser'
-import nuxt from './.nuxt/eslint.config.mjs'
 
 export default antfu(
   {
@@ -15,7 +14,6 @@ export default antfu(
       'style/operator-linebreak': 'off',
     },
   },
-  nuxt,
   {
     languageOptions: {
       parserOptions: {
