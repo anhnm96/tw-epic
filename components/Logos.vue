@@ -175,7 +175,7 @@ const rowClasses: Record<(typeof logos)[number]['row'], string> = {
     >
       <a
         :href="logo.href"
-        class="grid size-20 place-items-center rounded-2xl bg-highlight/[7%] p-4 transition hover:-rotate-6 hover:bg-highlight/10 focus:outline-none focus:ring-2 focus:ring-highlight focus:ring-offset-2 sm:size-24"
+        class="bg-highlight/[7%] hover:bg-highlight/10 focus:ring-highlight grid size-20 place-items-center rounded-2xl p-4 transition hover:-rotate-6 focus:ring-2 focus:ring-offset-2 focus:outline-none sm:size-24"
       >
         <Icon class="size-full" :name="logo.src" :atl="logo.alt" />
       </a>

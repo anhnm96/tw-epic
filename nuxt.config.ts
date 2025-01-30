@@ -1,3 +1,5 @@
+import tailwindcss from '@tailwindcss/vite'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -5,20 +7,23 @@ export default defineNuxtConfig({
   modules: ['@nuxt/icon'],
   css: ['~/assets/css/main.css'],
   icon: {
-    mode: 'svg'
-  },
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
+    mode: 'svg',
   },
   app: {
     head: {
-      link: [{rel: 'preconnect', href: 'https://fonts.googleapis.com'},
-        {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: ""},
-        {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'}
+      link: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: '',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap',
+        },
       ],
-    }
-  }
+    },
+  },
+  vite: { plugins: [tailwindcss()] },
 })

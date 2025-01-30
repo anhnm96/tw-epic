@@ -17,25 +17,25 @@ import { clsx } from './utlis'
         "
       >
         <EpicStackLogo
-          class="size-20 animate-slide-top xl:animate-slide-left xl:[animation-delay:0.5s]"
+          class="animate-slide-top xl:animate-slide-left size-20 xl:[animation-delay:0.5s]"
         />
         <h1
           :class="
             clsx(
-              'mt-6 text-4xl font-medium sm:text-4.5xl md:mt-8 md:text-5xl lg:text-5.5xl xl:mt-0',
-              'animate-slide-top [animation-delay:0.3s] xl:animate-slide-left xl:[animation-delay:0.8s]',
+              'sm:text-4.5xl lg:text-5.5xl mt-6 text-4xl font-medium md:mt-8 md:text-5xl xl:mt-0',
+              'animate-slide-top xl:animate-slide-left [animation-delay:0.3s] xl:[animation-delay:0.8s]',
             )
           "
         >
           The <span class="text-highlight">Epic</span> Stack
         </h1>
         <p
-          class="text-slate-60 mt-4 animate-slide-top [animation-delay:0.8s] sm:mt-6 sm:text-lg md:text-xl xl:col-span-2 xl:mt-0 xl:animate-slide-left xl:[animation-delay:1.3s]"
+          class="text-slate-60 animate-slide-top xl:animate-slide-left mt-4 [animation-delay:0.8s] sm:mt-6 sm:text-lg md:text-xl xl:col-span-2 xl:mt-0 xl:[animation-delay:1.3s]"
         >
           Check the
           <a
             href="#"
-            class="text-black underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-highlight"
+            class="focus:ring-highlight text-black underline hover:no-underline focus:ring-2 focus:outline-none"
             >Getting Started</a
           >
           guide file for how to get your project off the ground!

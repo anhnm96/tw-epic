@@ -1,6 +1,5 @@
 import antfu from '@antfu/eslint-config'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
-import tsParser from '@typescript-eslint/parser'
 
 export default antfu(
   {
@@ -10,16 +9,12 @@ export default antfu(
       'antfu/if-newline': 'off',
       'no-console': ['warn', { allow: ['info', 'warn', 'error'] }],
       'style/brace-style': ['error', '1tbs'],
-      'style/arrow-parens': 'off',
+      'style/arrow-parens': [
+        'warn',
+        'as-needed',
+        { requireForBlockBody: true },
+      ],
       'style/operator-linebreak': 'off',
-    },
-  },
-  {
-    languageOptions: {
-      parserOptions: {
-        parser: tsParser,
-        sourceType: 'module',
-      },
     },
   },
   eslintPluginPrettierRecommended,
