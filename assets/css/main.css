@@ -1,5 +1,72 @@
 @import "tailwindcss";
-@config "../../tailwind.config.js";
+
+@theme {
+  --breakpoint-sm: 32.5rem;
+  --breakpoint-lg: 61rem;
+
+  --primary-color: #0ea5e9;
+  --color-highlight: #6202FF;
+
+  --font-poppins: 'Poppins', 'sans-serif';
+  --text-4_5xl: 2.625rem;
+  --text-4_5xl--line-height: 1.15;
+  --text-5_5xl: 3.375rem;
+  --text-5_5xl--line-height: 1;
+
+  --animate-roll-reveal: 0.4s roll-reveal linear(0, .007, .029 2.2%, .118 4.7%, .625 14.4%, .826 19%, .902, .962, 1.008 26.1%, 1.041 28.7%, 1.064 32.1%, 1.07 36%, 1.061 40.5%, 1.015 53.4%, .999 61.6%, .995 71.2%, 1) backwards;
+
+  @keyframes roll-reveal {
+    from {
+      transform: rotate(12deg) scale(0);
+      opacity: 0;
+    }
+
+    to {
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+    }
+  }
+
+  --animate-fade-in: 0.4s fade-in ease-out backwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  --animate-slide-top:slide-top 0.3s ease-out backwards;
+
+  @keyframes slide-top {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-slide-left: slide-left 0.3s ease-out backwards;
+
+  @keyframes slide-left {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
 
 body {
   @apply font-poppins;
